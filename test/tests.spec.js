@@ -103,7 +103,7 @@ const gradeExercise = (results, expectedLength, ...expectedKeys ) => {
 };
 
 describe('SQL Exercises -', function () {
-  this.timeout(10000);
+  this.timeout(20000);
 
   let results = null;
 
@@ -112,7 +112,7 @@ describe('SQL Exercises -', function () {
       multipleStatements: true,
       host: 'localhost',
       user: config.username,
-      password: config.password,
+      insecureAuth: true,
       database: 'sakila'
     });
 
